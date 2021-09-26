@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else if (moveDirection != Vector3.zero && Input.GetKey(KeyCode.LeftShift))
             {
-                Run();
+                Dive();
             }
             else if (moveDirection == Vector3.zero)
             {
@@ -91,9 +91,9 @@ public class PlayerMovement : MonoBehaviour
         moveSpeed = walkSpeed;
 	}
 
-    private void Run()
+    private void Dive()
 	{
-        moveSpeed = runSpeed;
+        Debug.Log("TODO: Dive!");
 	}
 
     private void Jump()

@@ -8,6 +8,8 @@ public class AnimatorManager : MonoBehaviour
 	private int verticalId;
 	private int readyToSetId;
 	private int setBallId;
+	private int fullBodySetLayerId;
+	private int partialBodySetLayerId;
 
 	private void Awake()
 	{
@@ -16,6 +18,8 @@ public class AnimatorManager : MonoBehaviour
 		verticalId = Animator.StringToHash("Vertical");
 		readyToSetId = Animator.StringToHash("ReadyToSet");
 		setBallId = Animator.StringToHash("SetBall");
+		fullBodySetLayerId = animator.GetLayerIndex("FB Set Layer");
+		partialBodySetLayerId = animator.GetLayerIndex("PB Set Layer");
 	}
 
 	public void UpdateAnimatorValues(float verticalMovement, float horizontalMovement)
